@@ -2,17 +2,14 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 // import viteLogo from '/vite.svg'
 import "./App.css";
-import Home from "./components/hero"
+import Home from "./components/hero";
 import Nav from "./components/navbar";
 function App() {
   return (
     <>
-      <Nav />
       <div>
-        <section id="home" className="bg-[rgb(18,30,54)]">
-          <Home />
-        </section>
-
+        <Nav />
+        <Home />
         <section id="about" className="min-h-screen bg-gray-200">
           About Section
         </section>

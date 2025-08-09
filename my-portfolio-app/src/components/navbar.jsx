@@ -28,13 +28,17 @@ const Nav = () => {
               open ? "top-12" : "top-[-490px]"
             }`}
           >
-            {Links.map((link , index) => (
-              <li key={Math.random()} className="md:ml-8 md:my-0 my-7 font-semibold">
+            {Links.map((link, index) => (
+              <li
+                key={Math.random()}
+                className="md:ml-8 md:my-0 my-7 font-semibold"
+              >
                 <a
                   href={link.link}
-                  className="text-white-800 hover:text-blue-400 duration-500"
+                  className="relative group text-white hover:text-blue-400 transition duration-300"
                 >
                   {link.name}
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
                 </a>
               </li>
             ))}
